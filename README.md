@@ -28,12 +28,12 @@ I am actually working through that right now, for one my password entry does not
 *KEY LEARNING* <br>localStorage: Stores data with no expiration date. It will persist until explicitly deleted by the user (e.g., by clearing browser data) or by web application code. Data stored in localStorage is shared across all tabs and windows from the same origin.
 
 
-References:
+References:<br>
 [Pattern Mismatch for event validations](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/patternMismatch)<br>
 
 [Pattern for HTML](https://www.w3schools.com/tags/att_input_pattern.asp)<br>
 
-[Password validation for HTML] (https://www.w3schools.com/howto/howto_js_password_validation.asp)
+[Validation](https://www.w3schools.com/howto/howto_js_password_validation.asp)
 
  <br> 
 
