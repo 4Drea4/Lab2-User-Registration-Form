@@ -20,3 +20,7 @@ Event Default helps prevent anything from being pre-loaded, reset unnecessarily 
 
 
 *KEY LEARNING* localStorage: Stores data with no expiration date. It will persist until explicitly deleted by the user (e.g., by clearing browser data) or by web application code. Data stored in localStorage is shared across all tabs and windows from the same origin.
+
+
+References:
+(!Pattern Mismatch for event validations)[https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/patternMismatch]

@@ -20,26 +20,62 @@ customEmailInput.addEventListener('input', function (event) {
   }
   customEmailError.textContent = customEmailInput.validationMessage;
 });
+console.log(customEmailInput);
 
 //event listener for username
-customUserInput.addEventListener('input', function (event) {
+customUserInput.addEventListener('input', function () {
   if(customUserInput.validity.tooShort){
     customUserInput.setCustomValidity('This usernmae is too short, please make it longer');
   }else if (customUserInput.validity.valueMissing){
     customUserInput.setCustomValidity('Please enter a username');
+  }else{
+    customUserInput.setCustomValidity('');
   }
-  else{
-    customUserInput.setCustomValidity();
+  customUserError.textContent =customUserInput.validationMessage;
+});
+    console.log(customUserInput);
+
+
+    //event listener for password
+customPWInput.addEventListener('input', function (){
+
+  //if empty
+  if (customPWInput.validity.valueMissing){
+    customPWInput.setCustomValidity('Please enter your password.')
+
+      //too short error message
+  }else if (customPWInput.validity.tooShort){
+    customPWInput.setCustomValidity('This password is too short');
+//doesnt match confirm password
+  } else if (customPWInput.validity.patternMismatch){
+    customPWInput.setCustomValidity('Passwords have meet the requirements');
+  } else{
+    customPWInput.setCustomValidity('');
   }
-  customEmailError.textContent =customUserInput.validationMessage;
+  customPWError.textContent =customPWInput.validationMessage;
+});
 
-    });
+//event listener for  confirm password
 
+confirmPWInput.addEventListener('input', function (){
 
-//event listener for password
+  //enter password
+  if (confirmPWInput.validity.valueMissing){
+    confirmPWInput.setCustomValidity('Please confirm your password.');
+  
+  //too short error message
+  }else if (confirmPWInput.validity.tooShort){
+    confirmPWInput.setCustomValidity('This password is too short');
 
+  //doesnt match confirm password
+  } else if (confirmPWInput.value !== customPWInput.value){
+    confirmPWInput.setCustomValidity('Passwords do not match.');
+  } else{
+    confirmPWInput.setCustomValidity('');
+  }
+  confirmPWError.textContent =confirmPWInput.validationMessage;
+});
 
-//event listener for confirm password
 
 
 //on submit event listener add event.preventDefault()
