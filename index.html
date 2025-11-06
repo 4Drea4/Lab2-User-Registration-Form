@@ -11,24 +11,28 @@
     <h1 class="heading" id="header">Create Account</h1>
     <form id="customValidationForm" novalidate>
 
-        <label for="customUserName">Username</label>
+        <label for="customUser">Username</label>
         <input type="text" id="customUser" name="customUser" required minlength="3" required>
-        <span class="error-message" id="customUserError"></span>
+        <span class="error-message" id="customUserError" aria-live="polite"></span>
 
         <label for="customEmail">Email:</label>
         <input type="email" id="customEmail" name="customEmail" required>
-        <span class="error-message" id="customEmailError"></span>
+        <span class="error-message" id="customEmailError" aria-live="polite"></span>
+
  <!--hide this should not be able to see -->
         <label for="customPassword">Password</label>
-        <input type="password" id="customPW" name="customPW" required>
-        <span class="error-message" id="customPwError" required minlength="8"></span>
+        <input type="password" id="customPW" name="customPW" required minlength="8" pattern="pattern=[a-z]{1,15}">
+        <span class="error-message" id="customPwError" aria-live="polite"></span>
+
 
         <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" name="confirmPW" required required minlength="8">
-        <span class="error-message" id="confirmPWError"></span>
+        <input type="password" id="confirmPassword" name="confirmPW" required  minlength="8">
+        <span class="error-message" id="confirmPWError" aria-live="polite"></span>
+
+ <!-- modify it to include all validation attributesx -->
 
 
-        <button type="submit">Sign In</button>
+        <button type="submit">Register</button>
       </form>
        
       
