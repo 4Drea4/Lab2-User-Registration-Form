@@ -20,9 +20,20 @@ customEmailInput.addEventListener('input', function (event) {
   }
   customEmailError.textContent = customEmailInput.validationMessage;
 });
+
 //event listener for username
-customEmailInput.addEventListener('input', function (event) {
-  if(customEmailInput.)
+customUserInput.addEventListener('input', function (event) {
+  if(customUserInput.validity.tooShort){
+    customUserInput.setCustomValidity('This usernmae is too short, please make it longer');
+  }else if (customUserInput.validity.valueMissing){
+    customUserInput.setCustomValidity('Please enter a username');
+  }
+  else{
+    customUserInput.setCustomValidity();
+  }
+  customEmailError.textContent =customUserInput.validationMessage;
+
+    });
 
 
 //event listener for password
