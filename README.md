@@ -16,6 +16,8 @@ Event Default helps prevent anything from being pre-loaded, reset unnecessarily 
 4. Describe a challenge you faced in implementing the real-time validation and how you solved it.
 
 5. How did you ensure that custom error messages were user-friendly and displayed at the appropriate times?
+I am actually working through that right now, for one my password entry does not currently tell the user what the requirements are but then **penalizes** them for it. Secondly, my current password is flagging me although its within the patterns that I have set for the password so I have to go back to the drawing board. 
+
 </td></tr></table>
 
 
@@ -24,3 +26,6 @@ Event Default helps prevent anything from being pre-loaded, reset unnecessarily 
 
 References:
 (!Pattern Mismatch for event validations)[https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/patternMismatch]
+
+(Pattern for HTML !)[https://www.w3schools.com/tags/att_input_pattern.asp]
+(!Password validation for HTML)[!https://www.w3schools.com/howto/howto_js_password_validation.asp]

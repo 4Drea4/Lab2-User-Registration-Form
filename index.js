@@ -48,13 +48,13 @@ customPWInput.addEventListener('input', function (){
     customPWInput.setCustomValidity('This password is too short');
 //doesnt match confirm password
   } else if (customPWInput.validity.patternMismatch){
-    customPWInput.setCustomValidity('Passwords have meet the requirements');
+    customPWInput.setCustomValidity('Passwords have to meet the requirements');
   } else{
     customPWInput.setCustomValidity('');
   }
   customPWError.textContent =customPWInput.validationMessage;
 });
-
+console.log(customPWInput);
 //event listener for  confirm password
 
 confirmPWInput.addEventListener('input', function (){

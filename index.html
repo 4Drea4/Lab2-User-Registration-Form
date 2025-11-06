@@ -12,7 +12,7 @@
     <form id="customValidationForm" novalidate>
 
         <label for="customUser">Username</label>
-        <input type="text" id="customUser" name="customUser" required minlength="3" required>
+        <input type="text" id="customUser" name="customUser"  minlength="3" required>
         <span class="error-message" id="customUserError" aria-live="polite"></span>
 
         <label for="customEmail">Email:</label>
@@ -20,8 +20,9 @@
         <span class="error-message" id="customEmailError" aria-live="polite"></span>
 
  <!--hide this should not be able to see -->
-        <label for="customPassword">Password</label>
-        <input type="password" id="customPW" name="customPW" required minlength="8" pattern="pattern=[a-z]{1,15}">
+        <label for="customPW">Password</label>
+        <input type="password" id="customPW" name="customPW" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}" autocomplete="new-password">
+        <small>At least 8 characters, with uppercase, lowercase, and a number.</small>
         <span class="error-message" id="customPwError" aria-live="polite"></span>
 
 
