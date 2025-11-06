@@ -79,6 +79,23 @@ confirmPWInput.addEventListener('input', function (){
 
 
 //on submit event listener add event.preventDefault()
+const form = document.getElementById('customValidationForm');
+
+form.addEventListener('submit', function (event){
+  event.preventDefault();
+  console.log('Form submitted successfully!');
+ //html 5 validations
+ if(!form.checkValidity()){
+  console.log("Please fill out the form to your utmost abilities");
+  return;
+ }
+ 
+//alert for the user by pulling the input
+const username = document.getElementById('customUser').value;
+alert(`Welcome, ${username} we are so happy to have you here!`);
+form.reset();
+}
+);
 
 //Load saved username: On page load, check if a username is saved in localStorage. If so, pre-fill the username field: I added autocomplete in html not sure if that is the same thing
 // Check validity using the Constraint Validation API (inputElement.validity).
