@@ -1,6 +1,6 @@
-# Lab 2 Interactive User Registration Form Read Me
+# Lab 2 Interactive User Registration Form- Read Me
 ### Reflection Questions:
-
+:octocat:
 #### By Andrea Etienne 
 ###### 11/06/2025
 <table><tr><td>
@@ -33,4 +33,10 @@ References:
 
 [Pattern for HTML](https://www.w3schools.com/tags/att_input_pattern.asp)<br>
 
-[Password validation for HTML] (!https://www.w3schools.com/howto/howto_js_password_validation.asp)
+[Password validation for HTML] (https://www.w3schools.com/howto/howto_js_password_validation.asp)
+
+ <br> 
+
+
+
+![Spongebob Meme](https://media1.tenor.com/m/Xc1vTqtun24AAAAC/rainbow-spongebob.gif)
