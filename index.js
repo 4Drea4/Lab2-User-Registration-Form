@@ -8,6 +8,13 @@ const customPWError = document.getElementById('customPwError');
 const confirmPWInput = document.getElementById('confirmPassword');
 const confirmPWError = document.getElementById('confirmPWError');
 
+
+//Load saved username: On page load,
+const saveUser = localStorage.getItem('username');
+if (saveUser) {
+  customUserInput.value = saveUser;
+}
+onPageLoad();
 //  email validation logic with input event
 customEmailInput.addEventListener('input', function (event) {
   
@@ -97,9 +104,12 @@ form.reset();
 }
 );
 
-//Load saved username: On page load, check if a username is saved in localStorage. If so, pre-fill the username field: I added autocomplete in html not sure if that is the same thing
 
+// check if a username is saved in localStorage. If so, pre-fill the username field: I added autocomplete in html not sure if that is the same thing
+localStorage.setItem('savedUser',customUser.value );
 
+//save password in local storage
+localStorage.setItem('savedPW',confirmPWInput.value );
 //Apply the JavaScript Constraint Validation API to check validity and display custom error messages.
 
 
