@@ -10,7 +10,7 @@ const confirmPWError = document.getElementById('confirmPWError');
 
 
 //Load saved username: On page load,
-const saveUser = localStorage.getItem('username');
+const saveUser = localStorage.getItem('saveUser');
 if (saveUser) {
   customUserInput.value = saveUser;
 }
@@ -89,7 +89,7 @@ confirmPWInput.addEventListener('input', function (){
 const form = document.getElementById('customValidationForm');
 
 form.addEventListener('submit', function (event){
-  localStorage.setItem('savedUser',customUser.value );// check if a username is saved in localStorage. pre-fill the username field
+  localStorage.setItem('saveUser',customUser.value );// check if a username is saved in localStorage. pre-fill the username field
   console.log('This is working');
   event.preventDefault();
   console.log('Form submitted successfully!');
