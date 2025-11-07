@@ -89,8 +89,6 @@ confirmPWInput.addEventListener('input', function (){
 const form = document.getElementById('customValidationForm');
 
 form.addEventListener('submit', function (event){
-  localStorage.setItem('saveUser',customUser.value );// check if a username is saved in localStorage. pre-fill the username field
-  console.log('This is working');
   event.preventDefault();
   console.log('Form submitted successfully!');
  //html 5 validations
@@ -100,14 +98,15 @@ form.addEventListener('submit', function (event){
  }
  
 //alert for the user by pulling the input
-const username = document.getElementById('customUser').value;
+const username = customUserInput.value.trim();
+localStorage.setItem('saveUser',username);// check if a username is saved in localStorage. pre-fill the username field
 alert(`Welcome, ${username} we are so happy to have you here!`);
 form.reset();
 }
 );
 
 
-
+localStorage.setItem('saveUser',customUserInput.value );// check if a username is saved in localStorage. pre-fill the username field
 
 //Apply the JavaScript Constraint Validation API to check validity and display custom error messages.
 
