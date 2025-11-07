@@ -89,6 +89,8 @@ confirmPWInput.addEventListener('input', function (){
 const form = document.getElementById('customValidationForm');
 
 form.addEventListener('submit', function (event){
+  localStorage.setItem('savedUser',customUser.value );// check if a username is saved in localStorage. pre-fill the username field
+  console.log('This is working');
   event.preventDefault();
   console.log('Form submitted successfully!');
  //html 5 validations
@@ -105,11 +107,8 @@ form.reset();
 );
 
 
-// check if a username is saved in localStorage. If so, pre-fill the username field: I added autocomplete in html not sure if that is the same thing
-localStorage.setItem('savedUser',customUser.value );
 
-//save password in local storage
-localStorage.setItem('savedPW',confirmPWInput.value );
+
 //Apply the JavaScript Constraint Validation API to check validity and display custom error messages.
 
 
