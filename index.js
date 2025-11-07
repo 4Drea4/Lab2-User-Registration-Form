@@ -98,15 +98,9 @@ form.reset();
 );
 
 //Load saved username: On page load, check if a username is saved in localStorage. If so, pre-fill the username field: I added autocomplete in html not sure if that is the same thing
-// Check validity using the Constraint Validation API (inputElement.validity).
+
 
 //Apply the JavaScript Constraint Validation API to check validity and display custom error messages.
 
 
 
-// keep form submission optional just like your comment
-// customForm.addEventListener('submit', function (event) {
-//   if (!customForm.checkValidity()) {
-//     event.preventDefault();
-//   }
-// });
