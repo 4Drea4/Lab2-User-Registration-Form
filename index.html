@@ -12,7 +12,7 @@
     <form id="customValidationForm" novalidate>
 
         <label for="customUser">Username</label>
-        <input type="text" id="customUser" name="customUser"  minlength="3" required>
+        <input type="text" id="customUser" name="customUser"  minlength="3" required autocomplete="username">
         <span class="error-message" id="customUserError" aria-live="polite"></span>
 
         <label for="customEmail">Email:</label>
@@ -27,7 +27,7 @@
 
 
         <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" name="confirmPW" required  minlength="8">
+        <input type="password" id="confirmPassword" name="confirmPW" required  minlength="8" autocomplete="new-password">
         <span class="error-message" id="confirmPWError" aria-live="polite"></span>
 
  <!-- modify it to include all validation attributesx -->

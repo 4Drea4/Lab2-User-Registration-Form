@@ -14,7 +14,7 @@ const saveUser = localStorage.getItem('username');
 if (saveUser) {
   customUserInput.value = saveUser;
 }
-onPageLoad();
+
 //  email validation logic with input event
 customEmailInput.addEventListener('input', function (event) {
   
